@@ -393,7 +393,7 @@ export default function InvoiceDetailPage() {
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Reference / Transaction #
-                  {method === 'cash' ? ' (optional)' : ' *'}
+                  {' *'}
                 </label>
                 <input
                   type="text"

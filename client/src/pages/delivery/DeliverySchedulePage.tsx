@@ -1,8 +1,7 @@
 import { useEffect, useState }        from 'react';
 import { useNavigate, useLocation }   from 'react-router-dom';
 import api from '../../services/api';
-import { formatDate, formatDateTime } from '../../utils/formatDate';
-import { formatCurrency }             from '../../utils/formatCurrency';
+import { formatDate } from '../../utils/formatDate';
 
 // Returns the URL prefix for the current portal
 function useBasePath() {

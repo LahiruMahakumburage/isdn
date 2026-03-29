@@ -277,7 +277,6 @@ export default function OrderTrackingPage() {
   const hasDriver  = delivery?.driver_name;
   const hasLiveGPS = delivery?.current_lat && delivery?.current_lng;
   const isDispatched = order.status === 'dispatched' || order.status === 'out_for_delivery';
-  const showMap    = !cancelled && (isDispatched || order.status === 'picking' || order.status === 'confirmed');
 
   return (
     <div className="p-6 max-w-4xl mx-auto">

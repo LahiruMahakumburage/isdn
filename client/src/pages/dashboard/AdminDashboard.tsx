@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate }         from 'react-router-dom';
 import api from '../../services/api';
 import { formatCurrency } from '../../utils/formatCurrency';
-import { formatChartDate, formatChartMonth } from '../../utils/formatDate';
+import { formatChartDate } from '../../utils/formatDate';
 import {
   AreaChart, Area, BarChart, Bar, XAxis, YAxis,
   CartesianGrid, Tooltip, ResponsiveContainer,

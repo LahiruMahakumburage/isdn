@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate }         from 'react-router-dom';
 import api from '../../services/api';
 import { formatCurrency }      from '../../utils/formatCurrency';
+import { formatChartDate, formatChartMonth } from '../../utils/formatDate';
 import { exportSalesReport }   from '../../utils/exportCsv';
 import {
   AreaChart, Area, BarChart, Bar, XAxis, YAxis,
@@ -198,7 +199,6 @@ export default function SalesReportPage() {
             ) : (
               <ResponsiveContainer width="100%" height={240}>
                 <AreaChart data={daily}
-                  margin={{ top:10, right:10, left:0, bottom:0 }}
                   margin={{ top:5, right:10, left:0, bottom:5 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0"/>
                   <XAxis dataKey="date" tick={{ fontSize:11, fill:"#9ca3af" }} tickLine={false}
