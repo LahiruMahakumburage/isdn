@@ -1,4 +1,4 @@
 export { useAuthStore }      from './authStore';
-export { useorderStore }     from './orderStore';
-export { useinventoryStore } from './inventoryStore';
-export { usenotificationStore } from './notificationStore';
+export { useOrderStore }     from './orderStore';
+export { useInventoryStore } from './inventoryStore';
+export { useNotificationStore } from './notificationStore';

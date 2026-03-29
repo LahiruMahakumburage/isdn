@@ -8,10 +8,10 @@ export const pool = mysql.createPool({
   password:         env.DB_PASSWORD,
   database:         env.DB_NAME,
   waitForConnections: true,
-  connectionLimit: 5
+  connectionLimit: 5,
   queueLimit:       0,
-    ssl: {
-          rejectUnauthorized: false,
-    },
+  ssl: {
+    rejectUnauthorized: false,
+  },
   timezone:         '+00:00',
 });

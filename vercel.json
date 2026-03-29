@@ -1,25 +1,25 @@
 {
-      "version": 2,
-      "buildCommand": "npm install --workspaces && npm run build && mkdir -p api && printf 'module.exports = require(\"../server/dist/index.js\");' > api/index.js",
-      "outputDirectory": "client/dist",
-      "functions": {
-              "api/index.js": {
-                        "memory": 1024,
-                        "maxDuration": 60
-              }
-      },
-      "routes": [
-              {
-                        "src": "/api/v1/(.*)",
-                        "dest": "api/index.js"
-              },
-              {
-                        "src": "/health",
-                        "dest": "api/index.js"
-              },
-              {
-                        "src": "/(.*)",
-                        "dest": "client/dist/index.html"
-              }
-      ]
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "client/dist",
+  "functions": {
+    "api/index.ts": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/v1/(.*)",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
