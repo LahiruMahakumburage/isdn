@@ -1,6 +1,6 @@
 {
       "version": 2,
-      "buildCommand": "npm install --workspaces && npm run build && mkdir -p api && printf 'module.exports = require(\"../server/dist/index.js\");' > api/index.js",
+      "buildCommand": "npm install --workspaces && npm run build",
       "outputDirectory": "client/dist",
       "functions": {
               "api/index.js": {
